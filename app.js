@@ -27,6 +27,12 @@ app.use(function(req, res, next) {
   next(createError(404));
 });
 
+
+app.get("/politicians", (req, resp) => {
+  resp.json("ELIZABETH WARREN GOES HERE");
+  resp.status(200);
+})
+
 // error handler
 app.use(function(err, req, res, next) {
   // set locals, only providing error in development
